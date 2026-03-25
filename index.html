@@ -15,6 +15,16 @@
       font-family: 'Cormorant Garamond', serif;
       color: #2C2417;
     }
+    .fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+ transition: opacity 1.8s ease, transform 1.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
   </style>
 </head>
 
@@ -60,47 +70,46 @@ The archive develops slowly, with restraint.
 
 </div>
   </div>
-<!-- ARCHIVE 001 -->
+<!-- FOUNDATION -->
+<div class="max-w-2xl mx-auto mt-40 fade-in">
 
-<div class="max-w-5xl mx-auto mt-40">
-
-  <p class="text-[10px] tracking-[0.4em] opacity-30">
-    ARCHIVE 001
+  <p class="text-[10px] tracking-[0.4em] mb-6 opacity-30">
+    FOUNDATION
   </p>
 
-<div class="grid md:grid-cols-2 gap-24 items-center">
+  <h3 class="text-3xl tracking-tight mb-6">
+    Structure as Identity
+  </h3>
 
-    <!-- IMAGE -->
-    <div>
-      <img src="mood-001.jpg" class="w-full object-cover opacity-95">
-    </div>
+  <div class="w-12 h-[1px] bg-[#2C2417] mb-6 opacity-40"></div>
 
-    <!-- TEXT -->
-    <div>
-     <h3 class="text-3xl mb-6 leading-tight">
-        The Structure Coat
-      </h3>
-<div class="w-12 h-[1px] bg-[#2C2417] mb-6 opacity-40"></div>
-      <p class="text-sm opacity-60 leading-relaxed mb-6">
-        Wool construction. Reduced silhouette.  
-        Designed with restraint. Built for permanence.
-      </p>
-
-      <p class="text-xs tracking-[0.3em] opacity-40">
-        CAMEL WOOL · DOUBLE BREASTED
-      </p>
-    </div>
-
-  </div>
+  <p class="text-sm opacity-50 leading-relaxed">
+    Form before product.  
+    Structure before decoration.  
+    The system comes first.
+  </p>
 
 </div>
+
   <div class="h-56"></div>
+  
   <!-- ATMOSPHERE -->
 
-<div class="relative">
-  <img src="mood-001.jpg" class="w-full h-[80vh] object-cover opacity-80">
-  <div class="absolute inset-0 bg-[#F5F1EB] opacity-10"></div>
+<div class="relative fade-in">
+  <img src="mood-001.jpg" class="w-full h-[90vh] object-cover opacity-90">
 </div>
-</div>
+  <script>
+  const elements = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
