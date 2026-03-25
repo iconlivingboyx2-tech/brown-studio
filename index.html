@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
+    html {
+  scroll-behavior: smooth;
+}
     body {
       background-color: #F5F1EB;
       font-family: 'Cormorant Garamond', serif;
@@ -48,14 +51,13 @@
   X.X
 </div>
     <div class="space-x-8">
-     <span>Archive</span>
-<span>Studio</span>
-<span>Philosophy</span>
-    </div>
+<a href="#home">Archive</a>
+<a href="#studio">Studio</a>
+<a href="#philosophy">Philosophy</a>
   </div>
 
   <!-- HERO -->
- <div class="max-w-2xl mx-auto text-center fade-in">
+<div id="home" class="max-w-2xl mx-auto text-center fade-in">
     <p class="text-xs tracking-[0.3em] mb-6">BROWN COAT ARCHIVE</p>
     <h1 class="text-7xl md:text-9xl mb-8 tracking-tight">
   xxstylishly
@@ -85,11 +87,11 @@ The archive develops slowly, with restraint.
 </div>
   </div>
 <!-- FOUNDATION -->
-<div class="max-w-5xl mx-auto mt-56 grid md:grid-cols-2 gap-32 items-start fade-in">
+<div id="philosophy" class="max-w-5xl mx-auto mt-32 grid ...
 
   <!-- IMAGE (LEFT) -->
- <div class="relative image-hover">
-<img src="mood-001.jpg" class="w-full h-[90vh] object-cover opacity-100 will-change-transform">
+<div id="studio" class="relative image-hover">
+<img src="mood-001.jpg" class="w-full h-[65vh] md:h-[90vh] object-cover opacity-100 will-change-transform">
 </div>
 
   <!-- TEXT (RIGHT) -->
