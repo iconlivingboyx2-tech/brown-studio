@@ -18,12 +18,24 @@
     .fade-in {
   opacity: 0;
   transform: translateY(20px);
- transition: opacity 1.8s ease, transform 1.8s ease;
+ transition: opacity 2.4s ease, transform 2.4s ease;
 }
 
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+    .image-hover {
+  overflow: hidden;
+}
+
+.image-hover img {
+  transition: transform 1.8s ease, opacity 1.8s ease;
+}
+
+.image-hover:hover img {
+  transform: scale(1.03);
+  opacity: 1;
 }
   </style>
 </head>
@@ -31,8 +43,10 @@
 <body class="px-6 py-10">
 
   <!-- NAV -->
-  <div class="flex justify-between items-center mb-24 text-[11px] tracking-[0.3em] opacity-70">
-    <div>X.X</div>
+  <div class="flex justify-between items-center mb-32 text-[10px] tracking-[0.4em] opacity-50">
+    <div class="tracking-[0.5em]">
+  X.X
+</div>
     <div class="space-x-8">
      <span>Archive</span>
 <span>Studio</span>
@@ -41,7 +55,7 @@
   </div>
 
   <!-- HERO -->
-  <div class="text-center mb-40 mt-20">
+ <div class="max-w-2xl mx-auto text-center fade-in">
     <p class="text-xs tracking-[0.3em] mb-6">BROWN COAT ARCHIVE</p>
     <h1 class="text-7xl md:text-9xl mb-8 tracking-tight">
   xxstylishly
@@ -59,10 +73,10 @@
 
   <p class="text-xs tracking-[0.3em] mb-6 opacity-60">
 
-  <h2 class="text-2xl mb-6">
-   A system in quiet formation.
-  </h2>
-<p class="text-sm opacity-50 leading-relaxed mb-8">
+ <h2 class="text-3xl md:text-4xl tracking-tight mb-10">
+  A system in quiet formation.
+</h2>
+<p class="text-base opacity-50 leading-relaxed mb-12 max-w-xl mx-auto">
     Each piece is reduced to its essential state.  
 Nothing added without purpose.  
 The archive develops slowly, with restraint.
@@ -71,33 +85,31 @@ The archive develops slowly, with restraint.
 </div>
   </div>
 <!-- FOUNDATION -->
-<div class="max-w-2xl mx-auto mt-40 fade-in">
+<div class="max-w-5xl mx-auto mt-56 grid md:grid-cols-2 gap-32 items-start fade-in">
 
-  <p class="text-[10px] tracking-[0.4em] mb-6 opacity-30">
-    FOUNDATION
-  </p>
-
-  <h3 class="text-3xl tracking-tight mb-6">
-    Structure as Identity
-  </h3>
-
-  <div class="w-12 h-[1px] bg-[#2C2417] mb-6 opacity-40"></div>
-
-  <p class="text-sm opacity-50 leading-relaxed">
-    Form before product.  
-    Structure before decoration.  
-    The system comes first.
-  </p>
-
+  <!-- IMAGE (LEFT) -->
+ <div class="relative image-hover">
+<img src="mood-001.jpg" class="w-full h-[90vh] object-cover opacity-100 will-change-transform">
 </div>
 
-  <div class="h-56"></div>
-  
-  <!-- ATMOSPHERE -->
+  <!-- TEXT (RIGHT) -->
+  <div>
+   <p class="text-[10px] tracking-[0.5em] mb-8 opacity-20">
+  FOUNDATION
+</p>
+    <h3 class="text-3xl tracking-tight mb-6">
+      Structure as Identity
+    </h3>
 
-<div class="relative fade-in">
-  <img src="mood-001.jpg" class="w-full h-[90vh] object-cover opacity-90">
-</div>
+   <div class="w-10 h-[1px] bg-[#2C2417] mb-8 opacity-30"></div>
+
+   <p class="text-sm opacity-50 leading-relaxed">
+  Form before product.<br><br>
+  Structure before decoration.<br><br>
+  The system comes first.
+</p>
+  </div>
+
   <script>
   const elements = document.querySelectorAll('.fade-in');
 
